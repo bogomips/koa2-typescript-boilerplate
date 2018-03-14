@@ -1,6 +1,6 @@
 {
-  "name": "klab_challange_server",
-  "version": "1.0.0",
+  "name": "koa2-typescript-boilerplate",
+  "version": "0.0.1",
   "description": "",
   "main": "index.ts",
   "scripts": {
