@@ -43,7 +43,7 @@ Env: ${process.env.NODE_ENV}
 
 //dbApi.connect();
 
-const server = (config.server.ssl.active) ? sslServer.create() : app;
+const server = (config.server.ssl.active) ? sslServer.create(app) : app;
 
 if (server) 
   server.listen(config.server.port,() => console.log(start_msg));
