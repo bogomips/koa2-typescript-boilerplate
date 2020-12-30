@@ -1,4 +1,4 @@
-import 'app-module-path/register';
+//import 'app-module-path/register';
 import * as Koa from 'koa';
 //import * as colors from 'colors';
 import * as compress from 'koa-compress';

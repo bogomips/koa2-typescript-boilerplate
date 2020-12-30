@@ -2,24 +2,25 @@ import * as fs from 'fs';
 import * as https from 'https';
 import config from 'config';
 
-const sslServer={};
+const sslServer={
 
-sslServer.create = (app) => {
+  create: (app) => {
 
-  try {
+    try {
 
-    const sslOptions = {
-      key: fs.readFileSync(config.server.ssl.privkey).toString(),
-      cert: fs.readFileSync(config.server.ssl.cert).toString()
-    };
+      const sslOptions = {
+        key: fs.readFileSync(config.server.ssl.privkey).toString(),
+        cert: fs.readFileSync(config.server.ssl.cert).toString()
+      };
 
-    return https.createServer(sslOptions, app.callback());
+      return https.createServer(sslOptions, app.callback());
+    }
+    catch (e) {
+      console.log(e);
+      return null;
+    }
+
   }
-  catch (e) {
-    console.log(e);
-    return null;
-  }
-
 }
 
 export { sslServer }; 

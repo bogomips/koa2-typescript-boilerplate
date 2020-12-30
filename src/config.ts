@@ -3,7 +3,7 @@ const config:any = {
 
   server: {
     address:'localhost',
-    port:8181,
+    port:8888,
     cors: {
       allowedHeaders:'Origin, Content-Type, Authorization',
       allowedMethods:'GET,PUT,POST,DELETE,PATCH'
